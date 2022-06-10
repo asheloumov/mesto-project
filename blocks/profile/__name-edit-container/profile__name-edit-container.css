@@ -1,0 +1,13 @@
+.profile__name-edit-container {
+  margin: 0 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: min-content;
+  column-gap: 18px;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__name-edit-container {
+    column-gap: 10px;
+  }
+}

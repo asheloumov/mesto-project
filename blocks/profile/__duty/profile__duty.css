@@ -1,0 +1,17 @@
+.profile__duty {
+  margin: 0;
+  padding: 16px 0 0 0;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+}
+
+@media screen and (max-width: 650px) {
+  .profile__duty {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    padding: 14px 0 0 0;
+  }
+}

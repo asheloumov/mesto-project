@@ -1,0 +1,10 @@
+.card__info {
+  margin: 0;
+  padding: 25px 20px 31px 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}

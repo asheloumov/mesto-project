@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="#">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+  <!--начало блока page, начало блока header-->
+  <header class="header">
+    <img src="./images/Mesto-logo.svg" alt="Логотип место" class="header__logo">
+    <!--<div class="header__line"></div>-->
+  </header>
+  <!--конец блока header начало блока content-->
+  <main class="content">
+    <!--начало блока profile-->
+    <section class="profile">
+      <img src="./images/photo-profile-cousteau.jpg" alt="Фотография пользователя" class="profile__avatar-photo">
+      <div class="profile__info">
+        <div class="profile__name-edit-container">
+         <h1 class="profile__name">Жак-Ив Кусто</h1>
+         <button class="profile__edit-button" type="button"></button>
+        </div>
+        <p class="profile__duty">Исследователь океана</p>
+      </div>
+      <button class="profile__add-button" type="button">
+      </button>
+    </section>
+    <!--конец блока profile начало блока popup-->
+    <div class="popup">
+      <div class="popup__form-container">
+        <button class="popup__close-button" type="button"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="form">
+          <input type="text" class="form__input-field" placeholder="Жак-Ив Кусто">
+          <input type="text" class="form__input-field" placeholder="Исследователь океана">
+          <button class="form__save-button" type="button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <!--конец блока popup начало блока elements-->
+    <section class="elements">
+      <div class="card">
+        <img src="./images/photo-elements-karachyaevsk.jpg" alt="Фотография места" class="card__image">
+        <div class="card__info">
+          <p class="card__name">Карачаевск</p>
+          <button class="card__like-button card__like-button_active"></button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/photo-elements-elbrus.jpg" alt="Фотография места" class="card__image">
+        <div class="card__info">
+          <p class="card__name">Гора Эльбрус</p>
+          <button class="card__like-button"></button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/photo-elements-dombai.jpg" alt="Фотография места" class="card__image">
+        <div class="card__info">
+          <p class="card__name">Домбай</p>
+          <button class="card__like-button"></button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/photo-elements-elbrus.jpg" alt="Фотография места" class="card__image">
+        <div class="card__info">
+          <p class="card__name">Гора Эльбрус</p>
+          <button class="card__like-button"></button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/photo-elements-dombai.jpg" alt="Фотография места" class="card__image">
+        <div class="card__info">
+          <p class="card__name">Домбай</p>
+          <button class="card__like-button"></button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./images/photo-elements-karachyaevsk.jpg" alt="Фотография места" class="card__image">
+        <div class="card__info">
+          <p class="card__name">Карачаево-Черкессия</p>
+          <button class="card__like-button"></button>
+        </div>
+      </div>
+    </section>
+    <!--конец блока elements-->
+  </main>
+  <!--конец блока content начало блока footer-->
+  <footer class="footer">
+    <p class="footer__author">&copy;2022 Mesto Russia</p>
+  </footer>
+  <!--конец блока footer-->
+</body>
+<!--конец блока page-->
+</html>
