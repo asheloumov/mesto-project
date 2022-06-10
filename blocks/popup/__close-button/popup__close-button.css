@@ -4,7 +4,8 @@
   padding: 0;
   background-image: url(../../../images/close-icon.svg);
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
+  box-sizing: border-box;
   background-repeat: no-repeat;
   border: none;
   width: 32px;
@@ -22,5 +23,7 @@
   .popup__close-button {
     top: -42px;
     right: 0;
+    width: 20px;
+    height: 20px;
   }
 }
