@@ -17,5 +17,6 @@
     line-height: 17px;
     text-align: center;
     padding: 14px 0 0 0;
+    max-width: 282px;
   }
 }
