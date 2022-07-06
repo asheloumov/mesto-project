@@ -5,4 +5,5 @@
   flex-direction: column;
   border-radius: 10px;
   width: 282px;
+  position: relative;
 }

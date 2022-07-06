@@ -1,0 +1,19 @@
+.popup__container_photo {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: none;
+  display: flex;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+@media screen and (max-width: 650px) {
+  .popup__container_photo {
+    max-width: 75vw;
+    max-height: 75vh;
+    padding: 0;
+  }
+}

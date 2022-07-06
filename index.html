@@ -1,97 +1,134 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="#">
-  <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
-</head>
-<body class="page">
-  <!--начало блока page, начало блока header-->
-  <header class="header">
-    <img src="./images/Mesto-logo.svg" alt="Логотип место" class="header__logo">
-  </header>
-  <!--конец блока header начало блока content-->
-  <main class="content">
-    <!--начало блока profile-->
-    <section class="profile">
-      <img src="./images/photo-profile-cousteau.jpg" alt="Фотография пользователя" class="profile__avatar-photo">
-      <div class="profile__info">
-        <div class="profile__name-edit-container">
-         <h1 class="profile__name">Жак-Ив Кусто</h1>
-         <button class="profile__edit-button" type="button"></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="#" />
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="page">
+    <!--начало блока page, начало блока header-->
+    <header class="header">
+      <img
+        src="./images/Mesto-logo.svg"
+        alt="Логотип место"
+        class="header__logo"
+      />
+    </header>
+    <!--конец блока header начало блока content-->
+    <main class="content">
+      <!--начало блока profile-->
+      <section class="profile">
+        <img
+          src="./images/photo-profile-cousteau.jpg"
+          alt="Фотография пользователя"
+          class="profile__avatar-photo"
+        />
+        <div class="profile__info">
+          <div class="profile__name-edit-container">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button" type="button"></button>
+          </div>
+          <p class="profile__duty">Исследователь океана</p>
         </div>
-        <p class="profile__duty">Исследователь океана</p>
+        <button class="profile__add-button" type="button"></button>
+      </section>
+      <!--конец блока profile начало блока elements-->
+      <section class="elements"></section>
+      <!--конец блока elements-->
+    </main>
+    <!--конец блока content начало блока footer-->
+    <footer class="footer">
+      <p class="footer__author">&copy;2022 Mesto Russia</p>
+    </footer>
+    <!--конец блока footer начало блока popup-->
+    <div class="popup popup_edit-profile">
+      <div class="popup__container">
+        <button
+          class="popup__close-button popup__close-button_place_edit"
+          type="button"
+        ></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="form" name="edit-profile-form">
+          <input
+            type="text"
+            class="form__input-field"
+            placeholder="Имя"
+            name="profile-name"
+            required
+            id="profile-name"
+          />
+          <input
+            type="text"
+            class="form__input-field"
+            placeholder="Род деятельности"
+            name="profile-duty"
+            required
+          />
+          <button
+            class="form__save-button"
+            id="form__save-button-profile"
+            type="submit"
+          >
+            Сохранить
+          </button>
+        </form>
       </div>
-      <button class="profile__add-button" type="button">
-      </button>
-    </section>
-    <!--конец блока profile начало блока elements-->
-    <section class="elements">
-      <article class="card">
-        <img src="./images/photo-elements-karachyaevsk.jpg" alt="Фотография места" class="card__image">
-        <div class="card__info">
-          <h2 class="card__name">Карачаевск</h2>
-          <button class="card__like-button card__like-button_active" type="button"></button>
-        </div>
-      </article>
-      <article class="card">
-        <img src="./images/photo-elements-elbrus.jpg" alt="Фотография места" class="card__image">
-        <div class="card__info">
-          <h2 class="card__name">Гора Эльбрус</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </article>
-      <article class="card">
-        <img src="./images/photo-elements-dombai.jpg" alt="Фотография места" class="card__image">
-        <div class="card__info">
-          <h2 class="card__name">Домбай</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </article>
-      <article class="card">
-        <img src="./images/photo-elements-elbrus.jpg" alt="Фотография места" class="card__image">
-        <div class="card__info">
-          <h2 class="card__name">Гора Эльбрус</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </article>
-      <article class="card">
-        <img src="./images/photo-elements-dombai.jpg" alt="Фотография места" class="card__image">
-        <div class="card__info">
-          <h2 class="card__name">Домбай</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </article>
-      <article class="card">
-        <img src="./images/photo-elements-karachyaevsk.jpg" alt="Фотография места" class="card__image">
-        <div class="card__info">
-          <h2 class="card__name">Карачаево-Черкессия</h2>
-          <button class="card__like-button" type="button"></button>
-        </div>
-      </article>
-    </section>
-    <!--конец блока elements-->
-  </main>
-  <!--конец блока content начало блока footer-->
-  <footer class="footer">
-    <p class="footer__author">&copy;2022 Mesto Russia</p>
-  </footer>
-  <!--конец блока footer начало блока popup-->
-  <div class="popup">
-    <div class="popup__container">
-      <button class="popup__close-button" type="button"></button>
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="form" name="edit-profile-form">
-        <input type="text" class="form__input-field" placeholder="Имя" name="profile-name" required>
-        <input type="text" class="form__input-field" placeholder="Род деятельности" name="profile-duty" required>
-        <button class="form__save-button" type="submit">Сохранить</button>
-      </form>
     </div>
-  </div>
-  <!--конец блока popup-->
-</body>
-<!--конец блока page-->
+    <div class="popup popup_add-card">
+      <div class="popup__container">
+        <button
+          class="popup__close-button popup__close-button_place_add"
+          type="button"
+        ></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="form" name="edit-place-form">
+          <input
+            type="text"
+            class="form__input-field"
+            id="place-name"
+            placeholder="Название"
+            name="place-name"
+            required
+          />
+          <input
+            type="text"
+            class="form__input-field"
+            placeholder="Ссылка на картинку"
+            name="place-picture-link"
+            required
+          />
+          <button class="form__save-button" type="submit">Создать</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="popup-photo">
+      <div class="popup__container popup__container_photo">
+        <figure class="popup__photo-figure">
+          <img
+            src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg"
+            alt="#"
+            class="popup__full-size-photo"
+          />
+          <figcaption class="popup__photo-caption">Карачаевск</figcaption>
+        </figure>
+        <button class="popup__close-button" type="button"></button>
+      </div>
+    </div>
+    <!--конец блока popup начало блока template-->
+    <template id="template">
+      <article class="card">
+        <img src="#" alt="Фотография места" class="card__image" />
+        <button class="card__delete-button" type="button"></button>
+        <div class="card__info">
+          <h2 class="card__name"></h2>
+          <button class="card__like-button" type="button"></button>
+        </div>
+      </article>
+    </template>
+    <script src="script.js"></script>
+  </body>
+  <!--конец блока page-->
 </html>
