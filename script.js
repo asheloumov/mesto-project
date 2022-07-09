@@ -88,6 +88,7 @@ function createCard(name, link) {
   const placeElement = templateCards.querySelector(".card").cloneNode(true);
   placeElement.querySelector(".card__name").textContent = name;
   placeElement.querySelector(".card__image").src = link;
+  placeElement.querySelector(".card__image").alt = name;
 
   placeElement
     .querySelector(".card__like-button")
@@ -107,6 +108,7 @@ function createCard(name, link) {
       openPopup(popupPhoto);
       fullSizePhoto.src = link;
       popupPhotoCapture.textContent = name;
+      fullSizePhoto.alt = name;
     });
 
   return placeElement;
@@ -114,7 +116,7 @@ function createCard(name, link) {
 
 function renderCard(name, link) {
   const card = createCard(name, link);
-  cardTable.append(card);
+  cardTable.prepend(card);
 }
 
 initialCards.forEach(function (item) {
@@ -143,27 +145,21 @@ function sendFormCardAdd(event) {
   const newCardInfo = {};
   newCardInfo.name = cardTitleInputField.value;
   newCardInfo.link = cardImageInputField.value;
-  initialCards.unshift(newCardInfo);
-  renderNewCard(initialCards[0].name, initialCards[0].link);
-  addWindowClose();
+  renderNewCard(newCardInfo.name, newCardInfo.link);
+  closePopup(popupAddCard);
   cardImageInputField.closest(".form").reset();
-}
-
-//закрытие модального окна с полноразмерной фотографией
-function closePopupPhoto() {
-  closePopup(popupPhoto);
 }
 
 popupPhoto
   .querySelector(".popup__close-button")
-  .addEventListener("click", closePopupPhoto);
+  .addEventListener("click", () => closePopup(popupPhoto));
 
 //Изменение имени и информации при нажатии на кнопку сохранить
 function saveProfileInfo(event) {
   event.preventDefault();
   profileName.textContent = profileNameInputField.value;
   profileDuty.textContent = profileDutyInputField.value;
-  editWindowClose();
+  closePopup(popupEditForm);
 }
 
 profileInfoSaveButton.addEventListener("click", saveProfileInfo);
@@ -179,22 +175,12 @@ function editWindowOpen() {
 editButton.addEventListener("click", editWindowOpen);
 
 //реализация функции закрытия модального окна редактирования профиля
-function editWindowClose() {
-  closePopup(popupEditForm);
-}
-
-popupCloseButton.addEventListener("click", editWindowClose);
+popupCloseButton.addEventListener("click", () => closePopup(popupEditForm));
 
 // открытие модального окна создания карточки
-function addWindowOpen() {
-  openPopup(popupAddCard);
-}
-
-addButton.addEventListener("click", addWindowOpen);
+addButton.addEventListener("click", () => openPopup(popupAddCard));
 
 // закрытие модального окна создания карточки
-function addWindowClose() {
-  closePopup(popupAddCard);
-}
-
-popupAddCardCloseButton.addEventListener("click", addWindowClose);
+popupAddCardCloseButton.addEventListener("click", () =>
+  closePopup(popupAddCard)
+);
